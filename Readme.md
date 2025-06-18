@@ -2,6 +2,7 @@
 
 * Студент: [Ирина Зорина](https://up.htmlacademy.ru/htmlcss-individual/2/user/2645065).
 * Наставник: [Малик Киров](https://htmlacademy.ru/profile/id17217).
+* Сайт: [Седона](https://whilealivecode.github.io/2645065-sedona-2/).
 
 ---
 
