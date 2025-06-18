@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ирина Зорина](https://up.htmlacademy.ru/htmlcss-individual/2/user/2645065).
-* Наставник: `Неизвестно`.
+* Наставник: [Малик Киров](https://htmlacademy.ru/profile/id17217).
 
 ---
 
