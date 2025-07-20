@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -185,7 +185,7 @@ body {
 .subscribe-background {
   color: #ffffff;
   background-color: #4d799e;
-  background-image: url("images/backgrounds/subscribe-background.jpg");
+  background-image: url("../images/backgrounds/subscribe-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -254,7 +254,7 @@ body {
 /*hotel filter*/
 .hotel-filter {
   background-color: #4d799e;
-  background-image: url("images/backgrounds/filter-background.jpg");
+  background-image: url("../images/backgrounds/filter-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #ffffff;
