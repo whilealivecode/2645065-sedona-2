@@ -24,7 +24,7 @@ body {
   background-color: #f2f2f2;
 }
 
-.content-wrapper {
+.body-content-wrapper {
   background-color: #ffffff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
@@ -52,17 +52,71 @@ body {
   font-weight: 400;
 }
 
-.main-nav .link-button {
-  font-size: 16px;
-  line-height: 20px;
+/*links styled as buttons*/
+.link-button {
+  font-weight: 700;
   color: #ffffff;
-  background-color: #756157;
   text-transform: uppercase;
   text-decoration-line: none;
   text-align: center;
+  background-color: #756157;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-/* hero*/
+.hotel-search-link {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.add-to-favourites {
+  background-color: #82b3d3;
+}
+
+.remove-from-favourites {
+  background-color: #7db54f;
+}
+
+.pagination-link {
+  background-color: #82b3d3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-link-current {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+/*buttons*/
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+}
+
+.subscribe-button  {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82b3d3;
+}
+
+.apply-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82b3d3;
+}
+
+.reset-button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*hero*/
 .hero {
   background-color: #bed3e3;
   background-image: url("../images/backgrounds/background-mask.svg"), url("../images/backgrounds/mountains.jpg");
@@ -164,16 +218,6 @@ body {
   color: #333333;
 }
 
-.hotel-search .link-button {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #756157;
-  text-decoration-line: none;
-}
-
 /*subscribe*/
 .subscribe {
   text-align: center;
@@ -205,27 +249,21 @@ body {
   color: #ffffff;
 }
 
-.user-email {
+.input {
   border: none;
   background-color: #f2f2f2;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  color: rgba(0,0,0, 0.6);
   text-align: left;
+  color: #000000;
 }
 
-.subscribe .button {
-  font-family: inherit;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  border: none;
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #82b3d3;
+.input::placeholder {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
 }
 
 /*main footer*/
@@ -284,36 +322,6 @@ body {
   color: #a9a9a9;
 }
 
-.price-input {
-  background-color: #f2f2f2;
-  border: none;
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.hotel-filter .button {
-  font-family: inherit;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  border: none;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.submit-button {
-  background-color: #82b3d3;
-}
-
-.reset-button {
-  background-color: rgba(0, 0, 0, 0);
-}
-
 /*search results*/
 .search-results {
   text-align: left;
@@ -336,11 +344,11 @@ body {
 }
 
 /*view buttons*/
-.view-buttons .link-button-active {
+.view-buttons .view-link-active {
   border: 2px solid #000000;
 }
 
-.view-buttons .link-button {
+.view-buttons .view-link {
   border: 2px solid #e5e5e5;
 }
 
@@ -369,24 +377,6 @@ body {
   text-align: right;
 }
 
-.hotel-links-wrapper .button-link {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-decoration-line: none;
-  text-align: center;
-}
-
-.hotel-links-wrapper .accommodation-link {
-  background-color: #756157;
-}
-
-.hotel-links-wrapper .add-to-favourites {
-  background-color: #82b3d3;
-}
-
 .rating-value {
   background-color: #f2f2f2;
   font-size: 16px;
@@ -399,21 +389,6 @@ body {
 /*pagination*/
 .pagination {
   text-align: center;
-}
-
-.pagination-link {
-  background-color: #82b3d3;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  text-transform: uppercase;
-  text-decoration-line: none;
-}
-
-.pagination-link-current {
-  background-color: #f2f2f2;
-  color: #000000;
 }
 
 .pagination-ellipsis {
