@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="content-wrapper">
+  <div class="body-content-wrapper">
     <!--main header-->
     <header class="main-header" data-test="header">
 
@@ -125,17 +125,17 @@
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <label class="price-label">
               от
-              <input class="price-input" type="number" name="min-price" id="min-price" min="0" max="9000" value="0">
+              <input class="input" type="number" name="min-price" id="min-price" min="0" max="9000" value="0">
             </label>
             <label class="price-label">
               до
-              <input class="price-input" type="number" name="max-price" id="max-price" min="0" max="9000" value="9000">
+              <input class="input" type="number" name="max-price" id="max-price" min="0" max="9000" value="9000">
             </label>
           </fieldset>
 
           <!--buttons-->
           <div class="buttons-wrapper">
-            <button class="button submit-button" type="submit">Применить</button>
+            <button class="button apply-button" type="submit">Применить</button>
             <button class="button reset-button" type="reset">Сбросить</button>
           </div>
         </form>
@@ -155,17 +155,17 @@
         <!--view buttons-->
         <ul class="view-buttons">
           <li>
-            <a class="link-button-active" href="catalog.html?view=tile">
+            <a class="view-link-active" href="catalog.html?view=tile">
               <span class="visually-hidden">Плиточный вид</span>
             </a>
           </li>
           <li>
-            <a class="link-button" href="catalog.html?view=card">
+            <a class="view-link" href="catalog.html?view=card">
               <span class="visually-hidden">Вид карточками</span>
             </a>
           </li>
           <li>
-            <a class="link-button" href="catalog.html?view=list">
+            <a class="view-link" href="catalog.html?view=list">
               <span class="visually-hidden">Вид списком</span>
             </a>
           </li>
@@ -185,8 +185,8 @@
               <p class="accommodation-price">От 4000 ₽</p>
             </div>
             <div class="hotel-links-wrapper">
-              <a class="button-link accommodation-link" href="#">Подробнее</a>
-              <a class="button-link add-to-favourites" href="#">В избранное</a>
+              <a class="link-button" href="#">Подробнее</a>
+              <a class="link-button add-to-favourites" href="#">В избранное</a>
             </div>
             <div class="hotel-rating-wrapper">
               <p class="stars">
@@ -207,8 +207,8 @@
               <p class="accommodation-price">От 5000 ₽</p>
             </div>
             <div class="hotel-links-wrapper">
-              <a class="button-link accommodation-link" href="#">Подробнее</a>
-              <a class="button-link add-to-favourites" href="#">В избранное</a>
+              <a class="link-button" href="#">Подробнее</a>
+              <a class="link-button remove-from-favourites" href="#">В избранном</a>
             </div>
             <div class="hotel-rating-wrapper">
               <p class="stars">
@@ -229,8 +229,8 @@
               <p class="accommodation-price">От 2500 ₽</p>
             </div>
             <div class="hotel-links-wrapper">
-              <a class="button-link accommodation-link" href="#">Подробнее</a>
-              <a class="button-link add-to-favourites" href="#">В избранное</a>
+              <a class="link-button" href="#">Подробнее</a>
+              <a class="link-button add-to-favourites" href="#">В избранное</a>
             </div>
             <div class="hotel-rating-wrapper">
               <p class="stars">
@@ -251,8 +251,8 @@
               <p class="accommodation-price">От 1500 ₽</p>
             </div>
             <div class="hotel-links-wrapper">
-              <a class="button-link accommodation-link" href="#">Подробнее</a>
-              <a class="button-link add-to-favourites" href="#">В избранное</a>
+              <a class="link-button" href="#">Подробнее</a>
+              <a class="link-button add-to-favourites" href="#">В избранное</a>
             </div>
             <div class="hotel-rating-wrapper">
               <p class="stars">
@@ -292,27 +292,27 @@
         <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="user-email">Укажите здесь Ваш e-mail</label>
-          <input class="user-email" type="email" name="email" id="user-email" placeholder="Ваш e-mail" required>
-          <button class="button" type="submit">Подписаться</button>
+          <input class="input" type="email" name="email" id="user-email" placeholder="Ваш e-mail" required>
+          <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
 
     <!--main footer-->
     <footer class="main-footer" data-test="footer">
-      <ul class="social-list">
-        <li class="social-item">
-          <a class="link-button" href="https://vk.com/htmlacademy">
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a class="socials-link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы ВКонтакте</span>
           </a>
         </li>
-        <li class="social-item">
-          <a class="link-button" href="https://t.me/htmlacademy">
+        <li class="socials-item">
+          <a class="socials-link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Наш Telegram-канал</span>
           </a>
         </li>
-        <li class="social-item">
-          <a class="link-button" href="https://www.youtube.com/user/htmlacademyru">
+        <li class="socials-item">
+          <a class="socials-link" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Наш YouTube-канал</span>
           </a>
         </li>
