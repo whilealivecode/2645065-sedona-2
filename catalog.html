@@ -131,8 +131,10 @@
               <fieldset class="price-filter-group fieldset-reset">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="price-input-wrapper">
-                    <input class="input min-price-input" type="number" name="min-price" min="0" max="9000" value="0">
-                    <input class="input max-price-input" type="number" name="max-price" min="0" max="9000" value="9000">
+                    <label class="visually-hidden" for="min-price">от</label>
+                    <input class="input min-price-input" type="number" name="min-price" id="min-price" min="0" max="10000" value="0">
+                    <label class="visually-hidden" for="max-price">до</label>
+                    <input class="input max-price-input" type="number" name="max-price" id="max-price" min="0" max="10000" value="9000">
                     <input class="price-input-range" type="range" min="0" max="10000" step="1" value="7000">
                   </div>
                   <div class="buttons-wrapper">
@@ -272,7 +274,7 @@
       <!--subscribe-->
       <section class="subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="user-email">Укажите здесь Ваш e-mail.</label>
           <input class="input user-email-input" type="email" name="email" id="user-email" placeholder="Ваш e-mail" required>
