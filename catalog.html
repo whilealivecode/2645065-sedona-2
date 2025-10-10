@@ -126,23 +126,21 @@
               </fieldset>
             </div>
 
-            <div class="filters-right-column">
-              <!--price filter-->
-              <fieldset class="price-filter-group fieldset-reset">
-                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <div class="price-input-wrapper">
-                    <label class="visually-hidden" for="min-price">от</label>
-                    <input class="input min-price-input" type="number" name="min-price" id="min-price" min="0" max="10000" value="0">
-                    <label class="visually-hidden" for="max-price">до</label>
-                    <input class="input max-price-input" type="number" name="max-price" id="max-price" min="0" max="10000" value="9000">
-                    <input class="price-input-range" type="range" min="0" max="10000" step="1" value="7000">
-                  </div>
-                  <div class="buttons-wrapper">
-                    <button class="button apply-button" type="submit">Применить</button>
-                    <button class="button reset-button" type="reset">Сбросить</button>
-                  </div>
-              </fieldset>
-            </div>
+            <!--price filter-->
+            <fieldset class="price-filter-group fieldset-reset">
+              <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                <div class="price-input-wrapper">
+                  <label class="visually-hidden" for="min-price">от</label>
+                  <input class="input min-price-input" type="number" name="min-price" id="min-price" min="0" max="10000" value="0">
+                  <label class="visually-hidden" for="max-price">до</label>
+                  <input class="input max-price-input" type="number" name="max-price" id="max-price" min="0" max="10000" value="9000">
+                  <input class="price-input-range" type="range" min="0" max="10000" step="1" value="7000">
+                </div>
+                <div class="buttons-wrapper">
+                  <button class="button apply-button" type="submit">Применить</button>
+                  <button class="button reset-button" type="reset">Сбросить</button>
+                </div>
+            </fieldset>
           </form>
         </div>
       </section>
@@ -302,8 +300,8 @@
           </a>
         </li>
       </ul>
-      <address>
-        <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <address class="phone">
+        <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <a class="academy-logo" href="https://htmlacademy.ru/">
         <img src="images/logotypes/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy - онлайн-курсов по веб-разработке.">
