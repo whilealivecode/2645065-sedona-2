@@ -129,7 +129,7 @@ body {
 
 .nav-left-column {
   display: flex;
-  column-gap: 46px;
+  column-gap: 30px;
 }
 
 .nav-right-column {
