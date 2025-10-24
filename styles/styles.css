@@ -144,6 +144,18 @@ body {
   position: relative;
 }
 
+.main-header-logo:hover {
+  opacity: 0.6;
+}
+
+.main-header-logo:focus {
+  opacity: 0.6;
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
+}
+
 .main-header-logo img {
   position: absolute;
   z-index: 1;
@@ -182,6 +194,18 @@ body {
   padding: 20px 16px;
 }
 
+.menu-link:hover {
+  color: #756157;
+}
+
+.menu-link:focus {
+  color: #756157;
+}
+
+.menu-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .menu-link-current::after {
   position: absolute;
   left: 16px;
@@ -196,18 +220,25 @@ body {
   line-height: 20px;
   width: 44px;
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
-}
-
-.user-search-link {
-  background-image: url("../images/icons/search.svg");
-}
-
-.user-favourites-link {
+  display: flex;
   position: relative;
-  background-image: url("../images/icons/like.svg");
+}
+
+.user-actions-link svg {
+  margin: auto;
+  fill: #000000;
+}
+
+.user-actions-link:hover svg {
+  fill: #756157;
+}
+
+.user-actions-link:focus svg {
+  fill: #756157;
+}
+
+.user-actions-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .hotels-count {
@@ -880,6 +911,12 @@ body {
   cursor: default;
 }
 
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .price-input-wrapper {
   grid-area: price-input-wrapper;
   display: grid;
@@ -1039,6 +1076,18 @@ body {
   color:#000000;
   text-decoration-line: none;
   grid-area: accommodation-link;
+}
+
+.accommodation-link:hover {
+  color: #756157;
+}
+
+.accommodation-link:focus {
+  color: #756157;
+}
+
+.accommodation-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .accommodation-photo {
