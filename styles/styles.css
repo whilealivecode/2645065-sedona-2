@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -46,6 +53,11 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .body-content-wrapper {
   background-color: #ffffff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
@@ -64,7 +76,8 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   text-align: center;
   background-color: #756157;
   font-size: 16px;
@@ -168,7 +181,7 @@ body {
 
 .main-header-logo {
   width: 138px;
-  position: relative;
+  z-index: 1;
 }
 
 .main-header-logo:hover,
@@ -194,11 +207,13 @@ body {
 
 .main-nav-list {
   min-width: 340px;
+  max-width: 465px;
   align-items: center;
 }
 
 .user-actions-list {
-  min-width: 135px;
+  min-width: 96px;
+  max-width: 135px;
   height: 100%;
   justify-content: flex-end;
 }
@@ -206,7 +221,8 @@ body {
 .nav-link {
   font-size: 20px;
   color: #000000;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   text-align: center;
   display: block;
 }
@@ -215,6 +231,8 @@ body {
   position: relative;
   line-height: 24px;
   padding: 20px 16px;
+  max-width: 465px;
+  overflow-wrap: break-word;
 }
 
 .menu-link:hover,
@@ -264,8 +282,8 @@ body {
   left: 20px;
   top: 11px;
   z-index: 1;
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   border-radius: 50px;
   padding: 5px;
   padding-left: 4px;
@@ -273,7 +291,8 @@ body {
   line-height: 10px;
   text-align: center;
   color: #ffffff;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   font-weight: 400;
 }
 
@@ -313,6 +332,7 @@ body {
   margin: 0 auto;
   margin-bottom: 25px;
   width: 628px;
+  overflow-wrap: break-word;
 }
 
 .advantages-subheader {
@@ -321,6 +341,7 @@ body {
   color: #333333;
   margin-top: 0;
   margin-bottom: 90px;
+  overflow-wrap: break-word;
 }
 
 .advantages-list {
@@ -345,18 +366,16 @@ body {
 
 .advantages-with-picture .advantages-text-wrapper {
   width: 400px;
-  padding-top: 102px;
-  padding-left: 85px;
-  padding-right: 85px;
+  padding: 102px 85px 0;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .advantages-without-picture .advantages-text-wrapper {
   width: 400px;
-  padding-top: 113px;
-  padding-left: 83px;
-  padding-right: 83px;
+  padding: 113px 83px 0;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .advantages-title {
@@ -364,21 +383,24 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   font-weight: 700;
-  width: min-content;
+  max-width: 175px;
   margin: 0 auto;
   margin-bottom: 62px;
+  overflow-wrap: break-word;
 }
 
 .advantages-with-picture .advantages-description {
   position: relative;
   margin: 0;
   color: #ffffff;
+  overflow-wrap: break-word;
 }
 
 .advantages-without-picture .advantages-description {
   position: relative;
   margin: 0;
   color: #333333;
+  overflow-wrap: break-word;
 }
 
 .advantages-description::before {
@@ -429,23 +451,8 @@ body {
 .services-item {
   width: 400px;
   min-height: 385px;
-  padding-top: 81px;
   flex-grow: 1;
-}
-
-.services-item:nth-child(1) {
-  padding-left: 110px;
-  padding-right: 110px;
-}
-
-.services-item:nth-child(2) {
-  padding-left: 85px;
-  padding-right: 85px;
-}
-
-.services-item:nth-child(3) {
-  padding-left: 95px;
-  padding-right: 95px;
+  padding: 81px 85px 0;
 }
 
 .services-title {
@@ -456,6 +463,7 @@ body {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 505px;
+  overflow-wrap: break-word;
 }
 
 .services-subtitle {
@@ -464,6 +472,7 @@ body {
   color: #333333;
   margin-top: 0;
   margin-bottom: 64px;
+  overflow-wrap: break-word;
 }
 
 .services-item:nth-child(odd) {
@@ -481,6 +490,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 75px 72px;
+  overflow-wrap: break-word;
 }
 
 .services-accommodation {
@@ -498,6 +508,7 @@ body {
 .services-description {
   color: #333333;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 /*hotel search*/
@@ -513,6 +524,7 @@ body {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 .hotel-search-subtitle {
@@ -521,7 +533,7 @@ body {
   color: #333333;
   margin-top: 0;
   margin-bottom: 54px;
-
+  overflow-wrap: break-word;
 }
 
 .hotel-search-link {
@@ -555,6 +567,7 @@ body {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 21px;
+  overflow-wrap: break-word;
 }
 
 .subscribe-subtitle {
@@ -564,6 +577,7 @@ body {
   margin: 0 auto;
   margin-bottom: 54px;
   width: 475px;
+  overflow-wrap: break-word;
 }
 
 .subscribe-image .subscribe-subtitle {
@@ -622,8 +636,8 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  min-width: 142px;
-  max-width: 238px;
+  min-width: 144px;
+  max-width: 240px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -650,6 +664,7 @@ body {
 
 .phone {
   justify-self: center;
+  max-width: 650px;
 }
 
 .phone-link {
@@ -658,8 +673,11 @@ body {
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
-  text-decoration-line: none;
-  display: table;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  display: block;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .phone-link:hover,
@@ -687,22 +705,21 @@ body {
 }
 
 /*-----------------------------catalog page (inner page)-----------------------------*/
-.hotel-filter-wrapper {
-  width: 1060px;
-  margin: 0 auto;
-}
-
-/*hotel filter*/
 .hotel-filter {
+  width: 1200px;
+
   background-color: #4d799e;
   background-image: url("../images/backgrounds/blurred-mountain.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: left top;
+}
+
+/*hotel filter*/
+.hotel-filter-wrapper {
   color: #ffffff;
   text-align: left;
-  background-position: left top;
-  padding-top: 35px;
-  padding-bottom: 70px;
+  padding: 35px 70px 70px;
 }
 
 /*catalog header (inner header)*/
@@ -712,6 +729,7 @@ body {
   line-height: 78px;
   margin-top: 0;
   margin-bottom: 8px;
+  overflow-wrap: break-word;
 }
 
 /*breadcrumbs*/
@@ -728,7 +746,8 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 .breadcrumbs-item {
@@ -826,8 +845,8 @@ body {
 
 .infrastructure-filter-group,
 .accommodation-filter-group {
-  min-width: 151px;
-  max-width: 220px;
+  min-width: 152px;
+  max-width: 190px;
 }
 
 .catalog-filter-title {
@@ -848,9 +867,10 @@ body {
 
 .filters-left-column {
   min-width: 371px;
-  max-width: 440px;
+  max-width: 450px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 67px;
 }
 
 .filter-label {
@@ -955,21 +975,15 @@ body {
 }
 
 .price-filter-group {
-  display: grid;
-  column-gap: 70px;
-  grid-template-columns: auto 191px;
-  grid-template-areas: "catalog-filter-title catalog-filter-title"
-                        "range-wrapper buttons-wrapper";
-}
-
-.price-filter-group .catalog-filter-title {
-  grid-area: catalog-filter-title;
+  display: flex;
 }
 
 .buttons-wrapper {
-  grid-area: buttons-wrapper;
-  display: grid;
-  row-gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 191px;
+  flex-direction: column;
 }
 
 .apply-button {
@@ -1028,10 +1042,10 @@ body {
 }
 
 .range-wrapper {
-  grid-area: range-wrapper;
   display: grid;
   column-gap: 2px;
   row-gap: 44px;
+  margin-right: 70px;
   grid-template-rows: 48px auto;
   grid-template-columns: 143px 143px;
   grid-template-areas: "min-price-label max-price-label"
@@ -1039,11 +1053,15 @@ body {
 }
 
 .min-price-label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: min-price-label;
   position: relative;
 }
 
 .max-price-label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: max-price-label;
   position: relative;
 }
@@ -1054,12 +1072,14 @@ body {
   padding-left: 20px;
   padding-right: 40px;
   width: 100%;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .price-input::-webkit-outer-spin-button,
 .price-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1082,6 +1102,9 @@ body {
 }
 
 .range-scale {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: range-scale;
   width: 100%;
   height: 4px;
@@ -1148,6 +1171,8 @@ body {
   margin: 0;
   margin-right: auto;
   align-self: center;
+  max-width: 500px;
+  overflow-wrap: break-word;
 }
 
 .search-right-column {
@@ -1156,7 +1181,8 @@ body {
 
 /*sorting the found hotels*/
 .search-select {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   border: 2px solid #e5e5e5;
   font-family: inherit;
   font-size: 18px;
@@ -1245,18 +1271,19 @@ body {
 /*hotel cards*/
 .accommodation-list {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   padding: 0;
   list-style-type: none;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 340px);
 }
 
 .accommodation-card {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   padding: 20px;
+  padding-bottom: 20px;
   display: grid;
   column-gap: 20px;
   row-gap: 16px;
@@ -1269,8 +1296,12 @@ body {
 }
 
 .accommodation-link {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   color:#000000;
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   grid-area: accommodation-link;
 }
 
@@ -1285,10 +1316,8 @@ body {
 
 .accommodation-photo {
   display: block;
-  margin-bottom: 16px;
-  max-width: 100%;
+  margin-bottom: 17px;
   height: auto;
-  object-fit: scale-down;
 }
 
 .accommodation-title {
@@ -1300,12 +1329,16 @@ body {
 }
 
 .accommodation-type {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: accommodation-type;
   color: #333333;
   margin: 0;
 }
 
 .accommodation-price {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: accommodation-price;
   text-align: right;
   color: #333333;
@@ -1313,10 +1346,14 @@ body {
 }
 
 .more-link {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: more-link;
 }
 
 .favourites {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
   grid-area: favourites;
 }
 
@@ -1349,6 +1386,8 @@ body {
 }
 
 .stars {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
   grid-area: stars;
   min-height: 36px;
   margin: 0;
@@ -1385,6 +1424,8 @@ body {
 }
 
 .rating-value {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
   background-color: #f2f2f2;
   font-size: 16px;
   line-height: 20px;
@@ -1462,7 +1503,7 @@ body {
 }
 
 .modal-close {
-  display: none;
+  display: block;
 }
 
 .hotel-search-modal {
@@ -1552,14 +1593,20 @@ body {
 }
 
 .check-in-label {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: check-in-label;
 }
 
 .check-in {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: check-in;
 }
 
 .wrong-date {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: wrong-date;
   color: #ff5757;
   padding-top: 4px;
@@ -1568,14 +1615,20 @@ body {
 }
 
 .check-out-label {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: check-out-label;
 }
 
 .check-out {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: check-out;
 }
 
 .right-date {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: right-date;
   color: #333333;
   padding-top: 4px;
@@ -1584,10 +1637,15 @@ body {
 }
 
 .adults-label {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: adults-label;
 }
 
 .modal-submit-button {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: modal-submit-button;
 }
 
@@ -1621,6 +1679,8 @@ body {
 }
 
 .count-right-column {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: count-right-column;
   display: flex;
 }
@@ -1783,6 +1843,10 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  padding-left: 22px;
+  padding-right: 18px;
+  padding-top: 20px;
+  padding-bottom: 23px;
   padding: 20px 18px 23px 22px;
   border-radius: 10px;
   width: 256px;
