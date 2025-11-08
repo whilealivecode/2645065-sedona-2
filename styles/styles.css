@@ -542,6 +542,7 @@ img {
   width: 376px;
   display: block;
   margin: 0 auto;
+  overflow-wrap: break-word;
 }
 
 /*subscribe*/
@@ -859,6 +860,12 @@ img {
   margin-bottom: 32px;
 }
 
+.catalog-filter-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .fieldset-reset {
   margin: 0;
   padding: 0;
@@ -874,9 +881,6 @@ img {
 }
 
 .filter-label {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   cursor: pointer;
   line-height: 23px;
   color: #ffffff;
@@ -884,23 +888,33 @@ img {
   max-width: 100%;
 }
 
-.checkbox-mark {
+.filter-input-checkbox {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
   width: 20px;
   height: 20px;
   background: #ffffff;
   border-radius: 4px;
   position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
-.radio-mark {
+.filter-input-radio {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
   width: 20px;
   height: 20px;
   background: #ffffff;
   border-radius: 50%;
   position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
-.filter-input-checkbox:checked + .filter-label .checkbox-mark::before {
+.filter-input-checkbox:checked::before {
   background-image: url("../images/icons/filters/checkbox-checked.svg");
   background-position: center;
   width: 13px;
@@ -913,7 +927,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.filter-input-radio:checked + .filter-label .radio-mark::before {
+.filter-input-radio:checked::before {
   background-color: #3f5e72;
   background-position: center;
   width: 10px;
@@ -927,51 +941,57 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.filter-label:hover .checkbox-mark,
-.filter-label:hover .radio-mark {
+.filter-input-checkbox:hover,
+.filter-input-radio:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.filter-label:hover .checkbox-label-text,
-.filter-label:hover .radio-label-text {
+.filter-input-checkbox:hover + .filter-label,
+.filter-input-radio:hover + .filter-label {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.filter-label:focus .checkbox-mark,
-.filter-label:focus .radio-mark {
+.filter-input-checkbox:focus,
+.filter-input-radio:focus {
   background-color: #ffffff;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
-.filter-label:focus .checkbox-label-text,
-.filter-label:focus .radio-label-text {
+.filter-input-checkbox:focus + .filter-label,
+.filter-input-radio:focus + .filter-label {
   color: #ffffff;
 }
 
-.filter-label:active .checkbox-mark,
-.filter-label:active .radio-mark {
+.filter-input-checkbox:active,
+.filter-input-radio:active {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.filter-label:active .checkbox-label-text,
-.filter-label:active .radio-label-text {
+.filter-input-checkbox:active + .filter-label,
+.filter-input-radio:active + .filter-label {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.filter-input-checkbox:disabled + .filter-label,
-.filter-input-radio:disabled + .filter-label {
+.filter-input-checkbox:disabled,
+.filter-input-radio:disabled,
+.filter-input-checkbox:disabled:hover,
+.filter-input-radio:disabled:hover,
+.filter-input-checkbox:focus,
+.filter-input-radio:focus {
+  background-color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
   cursor: default;
 }
 
-.filter-input-checkbox:disabled + .filter-label .checkbox-mark,
-.filter-input-radio:disabled + .filter-label .radio-mark {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.filter-input-checkbox:disabled + .filter-label .checkbox-label-text,
-.filter-input-radio:disabled + .filter-label .radio-label-text {
+.filter-input-checkbox:disabled + .filter-label,
+.filter-input-radio:disabled + .filter-label,
+.filter-input-checkbox:disabled:hover + .filter-label,
+.filter-input-radio:disabled:hover + .filter-label,
+.filter-input-checkbox:focus + .filter-label,
+.filter-input-radio:focus + .filter-label {
   color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  cursor: default;
 }
 
 .price-filter-group {
@@ -1503,7 +1523,7 @@ img {
 }
 
 .modal-close {
-  display: block;
+  display: flex; /*----для отображения модального окна нужно задать display: flex; вместо display: none;----*/
 }
 
 .hotel-search-modal {
@@ -1843,10 +1863,6 @@ img {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding-left: 22px;
-  padding-right: 18px;
-  padding-top: 20px;
-  padding-bottom: 23px;
   padding: 20px 18px 23px 22px;
   border-radius: 10px;
   width: 256px;
@@ -1854,8 +1870,10 @@ img {
   z-index: 1;
   overflow-wrap: break-word;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  bottom: -158px;
-  right: -115px;
+  top: 41px;
+  left: -115px;
+  max-height: 165px;
+  overflow: auto;
   display: none;
 }
 
