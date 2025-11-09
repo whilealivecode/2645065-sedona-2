@@ -1918,7 +1918,7 @@ img {
   left: -115px;
   overflow: visible; /*Видимый для треугольника*/
   padding: 0;
-  display: block;
+  display: none;
 }
 
 .tooltip-text {
