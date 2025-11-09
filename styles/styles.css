@@ -1531,7 +1531,7 @@ img {
 }
 
 .modal-close {
-  display: flex; /*----для отображения модального окна нужно задать display: flex; вместо display: none;----*/
+  display: none; /*----для отображения модального окна нужно задать display: flex; вместо display: none;----*/
 }
 
 .hotel-search-modal {
