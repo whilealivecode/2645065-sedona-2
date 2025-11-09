@@ -181,6 +181,87 @@
       </a>
     </footer>
   </div>
+
+  <!--modal-->
+  <div class="modal-overlay modal-close" data-test="modal">
+    <div class="hotel-search-modal">
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть окно.</span>
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none">
+          <path d="M14.5 1.78 13.2.5 7.49 6.2 1.79.5.48 1.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z"/>
+        </svg>
+      </button>
+      <section class="hotel-search-content">
+        <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          
+          <!--dates of hotel stay-->
+          <fieldset class="modal-hotel-search fieldset-reset">
+            <legend class="visually-hidden">Фильтры.</legend>
+            <label class="modal-label check-in-label" for="check-in">Дата Заезда:</label>
+            <div class="check-in-wrapper">
+              <input class="modal-input modal-input-date" type="text" name="check-in-date" id="check-in" value="27 апреля 2020" placeholder="Укажите дату" required>
+              <button class="calendar-check-in" type="button">
+                <span class="visually-hidden">Открыть календарь</span>
+              </button>
+            </div>
+            <span class="check-date wrong-date">Мы не можем отправить вас в прошлое.</span>
+            <label class="modal-label check-out-label" for="check-out">Дата Выезда:</label>
+            <div class="check-out-wrapper">
+              <input class="modal-input modal-input-date" type="text" name="check-out-date" id="check-out" value="1 сентября 2023" placeholder="Укажите дату" required>
+              <button class="calendar-check-out" type="button">
+                <span class="visually-hidden">Открыть календарь</span>
+              </button>
+            </div>
+            <span class="check-date right-date">На эти даты есть свободные номера. Пока есть.</span>
+
+          <!--number of hotel guests-->
+            <label class="modal-label adults-label" for="adults">Взрослые:</label>
+            <div class="count-right-column">
+              <div class="input-count-wrapper">
+                <button class="minus-button" type="button">
+                  <svg class="sign" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"><path d="M0 0v2h14V0H0Z"/></svg>
+                </button>
+                <input class="modal-input modal-input-count" type="text" name="adults-count" id="adults" value="2" required>
+                <button class="plus-button" type="button">
+                  <svg class="sign" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
+                </button>
+              </div>
+
+              <span class="form-label">
+                <label class="modal-label children-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-count">
+                    <svg class="tooltip-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
+                      <circle cx="13" cy="13" r="13" />
+                      <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/>
+                    </svg>
+                  </button>
+                  <div class="tooltip-wrapper"> <!-----нужен для отображения треугольника над тултипом, чтобы overflow: auto не обрезал его----->
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-count">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </div>
+                </span>
+              </span>
+            
+              <div class="input-count-wrapper">
+                <button class="minus-button" type="button">
+                  <svg class="sign" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2" fill="none"><path d="M0 0v2h14V0H0Z"/></svg>
+                </button>
+                <input class="modal-input modal-input-count" type="text" name="children-count" id="children" value="2">
+                <button class="plus-button" type="button">
+                  <svg class="sign" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
+                </button>
+              </div>
+            </div>
+
+          <!--submit button-->
+            <button class="button modal-submit-button" type="submit">Найти</button>
+          </fieldset>          
+        </form>
+      </section>      
+    </div>
+  </div>
+
 </body>
 
 </html>

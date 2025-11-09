@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -366,7 +366,7 @@ img {
 
 .advantages-with-picture .advantages-text-wrapper {
   width: 400px;
-  padding: 102px 85px 0;
+  padding: 103px 85px 0;
   flex-direction: column;
   flex-grow: 1;
 }
@@ -485,7 +485,7 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   padding-top: 103px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -1216,6 +1216,7 @@ img {
   padding-bottom: 12px;
   padding-left: 19px;
   padding-right: 52px;
+  align-self: flex-start;
   cursor: pointer;
   background-image: url("../images/icons/filters/select-arrow.svg");
   background-repeat: no-repeat;
@@ -1354,6 +1355,7 @@ img {
   grid-area: accommodation-type;
   color: #333333;
   margin: 0;
+  align-self: flex-start;
 }
 
 .accommodation-price {
@@ -1363,12 +1365,14 @@ img {
   text-align: right;
   color: #333333;
   margin: 0;
+  align-self: flex-start;
 }
 
 .more-link {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: more-link;
+  align-self: flex-start;
 }
 
 .favourites {
@@ -1379,6 +1383,7 @@ img {
 
 .add-to-favourites {
   background-color: #82b3d3;
+  align-self: flex-start;
 }
 
 .add-to-favourites:hover,
@@ -1393,6 +1398,7 @@ img {
 
 .remove-from-favourites {
   background-color: #7db54f;
+  align-self: flex-start;
 }
 
 .remove-from-favourites:hover,
@@ -1411,6 +1417,7 @@ img {
   grid-area: stars;
   min-height: 36px;
   margin: 0;
+  align-self: flex-start;
 }
 
 .star {
@@ -1455,6 +1462,7 @@ img {
   grid-area: rating-value;
   border-radius: 4px;
   padding: 8px 0;
+  align-self: flex-start;
 }
 
 /*pagination*/
@@ -1539,7 +1547,7 @@ img {
 
 .modal-close-button {
   position: absolute;
-  right: 54px;
+  right: 52px;
   top: 65px;
   width: 52px;
   height: 52px;
@@ -1548,6 +1556,13 @@ img {
   border-radius: 50%;
   z-index: 1;
   cursor: pointer;
+}
+
+.modal-close-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-close-button svg,
@@ -1601,9 +1616,9 @@ img {
 
 .modal-hotel-search {
   display: grid;
-  grid-template-areas: "check-in-label check-in"
+  grid-template-areas: "check-in-label check-in-wrapper"
                        ". wrong-date"
-                       "check-out-label check-out"
+                       "check-out-label check-out-wrapper"
                        ". right-date"
                        "adults-label count-right-column"
                        ". ."
@@ -1618,11 +1633,41 @@ img {
   grid-area: check-in-label;
 }
 
-.check-in {
+.check-in-wrapper {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: check-in;
+  grid-area: check-in-wrapper;
+  position: relative;
 }
+
+.calendar-check-in, 
+.calendar-check-out {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../images/icons/modal/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.modal-input-date:disabled ~ .calendar-check-in, 
+.modal-input-date:disabled ~ .calendar-check-out {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.modal-input-date:disabled ~ .calendar-check-in:focus, 
+.modal-input-date:disabled ~ .calendar-check-out:focus {
+  outline: none;
+}  
 
 .wrong-date {
   -ms-grid-row: 2;
@@ -1640,10 +1685,11 @@ img {
   grid-area: check-out-label;
 }
 
-.check-out {
+.check-out-wrapper {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
-  grid-area: check-out;
+  grid-area: check-out-wrapper;
+  position: relative;
 }
 
 .right-date {
@@ -1690,12 +1736,10 @@ img {
   padding-top: 10px;
   padding-bottom: 8px;
   padding-left: 20px;
-  padding-right: 50px;
+  padding-right: 20px;
   border-radius: 4px;
   line-height: 24px;
-  background-image: url("../images/icons/modal/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: right 17px center;
+  width: 100%;
 }
 
 .count-right-column {
@@ -1717,7 +1761,7 @@ img {
 .modal-input-count {
   line-height: 20px;
   text-align: center;
-  padding: 14px 7px;
+  padding: 15px 7px 13px;
   width: 31px;
 }
 
@@ -1803,6 +1847,7 @@ img {
   background-color: #83b3d3;
   border-radius: 10px;
   padding: 18px 0;
+  overflow-wrap: break-word;
 }
 
 .modal-submit-button:hover,
@@ -1858,12 +1903,11 @@ img {
   fill: #68a2ca;
 }
 
-.tooltip-text {
+.tooltip-wrapper {
   background-color: #333333;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding: 20px 18px 23px 22px;
   border-radius: 10px;
   width: 256px;
   position: absolute;
@@ -1872,9 +1916,17 @@ img {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   top: 41px;
   left: -115px;
+  overflow: visible; /*Видимый для треугольника*/
+  padding: 0;
+  display: block;
+}
+
+.tooltip-text {
+  display: block;
   max-height: 165px;
-  overflow: auto;
-  display: none;
+  overflow: auto; /*Прокрутка только для контента*/
+  padding: 20px 18px 23px 22px;
+  border-radius: 10px;
 }
 
 .tooltip-text::after {
@@ -1889,7 +1941,7 @@ img {
   right: 119px;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:hover + .tooltip-wrapper,
+.tooltip-toggle:focus + .tooltip-wrapper {
   display: block;
 }
