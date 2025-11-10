@@ -366,14 +366,14 @@ img {
 
 .advantages-with-picture .advantages-text-wrapper {
   width: 400px;
-  padding: 103px 85px 0;
+  padding: 102px 85px;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .advantages-without-picture .advantages-text-wrapper {
   width: 400px;
-  padding: 113px 83px 0;
+  padding: 113px 83px;
   flex-direction: column;
   flex-grow: 1;
 }
@@ -385,7 +385,7 @@ img {
   font-weight: 700;
   max-width: 175px;
   margin: 0 auto;
-  margin-bottom: 62px;
+  margin-bottom: 61px;
   overflow-wrap: break-word;
 }
 
@@ -452,7 +452,7 @@ img {
   width: 400px;
   min-height: 385px;
   flex-grow: 1;
-  padding: 81px 85px 0;
+  padding: 81px 85px;
 }
 
 .services-title {
@@ -1379,6 +1379,8 @@ img {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: favourites;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .add-to-favourites {
@@ -1409,6 +1411,18 @@ img {
 .remove-from-favourites:active {
   background-color: #7db54f;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.add-to-favourites:disabled,
+.add-to-favourites:disabled:hover,
+.add-to-favourites:disabled:focus,
+.remove-from-favourites:disabled,
+.remove-from-favourites:disabled:hover,
+.remove-from-favourites:disabled:focus {
+  background-color: #e5e5e5;
+  color: #ffffff;
+  pointer-events: none;
+  cursor: default;
 }
 
 .stars {
@@ -1918,7 +1932,7 @@ img {
   left: -115px;
   overflow: visible; /*Видимый для треугольника*/
   padding: 0;
-  display: block;
+  display: none;
 }
 
 .tooltip-text {
