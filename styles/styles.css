@@ -1413,6 +1413,18 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.add-to-favourites:disabled,
+.add-to-favourites:disabled:hover,
+.add-to-favourites:disabled:focus,
+.remove-from-favourites:disabled,
+.remove-from-favourites:disabled:hover,
+.remove-from-favourites:disabled:focus {
+  background-color: #e5e5e5;
+  color: #ffffff;
+  pointer-events: none;
+  cursor: default;
+}
+
 .stars {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
